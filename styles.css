@@ -1,0 +1,114 @@
+html,
+body {
+  font-family: Mate SC;
+  height: 100%;
+}
+
+#navbar {
+  border-right: 0.0625em solid rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 15rem;
+  height: 100%;
+  overflow: auto;
+}
+
+#title {
+  border-bottom: 0.0625em solid rgba(0, 0, 0, 0.1);
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 4em;
+  border-bottom: 0.0625em solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 0.0625em solid rgba(0, 0, 0, 0);
+}
+
+.nav-link:last-child {
+  border-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: lighter;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 250px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: rgb(0, 0, 0);
+  margin: 15px;
+  font-size: 0.96em;
+  text-align: justify;
+}
+
+img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15rem;
+  height: 15rem;
+}
+
+code {
+  display: block;
+  padding: 10px;
+  background-color: rgba(188, 230, 231, 0.582);
+  border-left: solid;
+  border-color: darkblue;
+}
+
+footer a {
+  text-decoration: underline;
+  color: blue;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 0.0625em solid rgba(0, 0, 0, 0.1);
+    border-width: 3px;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}

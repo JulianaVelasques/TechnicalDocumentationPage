@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Technical Page</title>
+  </head>
+  <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <nav id="navbar">
+      <header id="title">JavaScript</header>
+
+      <div class="left">
+        <a href="#What_is_JavaScript?" class="nav-link">What is JavaScript?</a>
+        <!--Should be one for every element with the .main-section-->
+
+        <a href="#What_you_should_already_know" class="nav-link">What you should already know</a>
+
+        <a href="#What_can_it_really_do?" class="nav-link"> What can it really do?</a>
+
+        <a href="#How_to_start_using_JS?" class="nav-link">How to start using JS?</a>
+
+        <a href="#Variables" class="nav-link">Variables</a>
+
+        <a href="#Declaring_Variables" class="nav-link">Declaring Variables</a>
+
+        <a href="#If...else_statement" class="nav-link">If...else statement</a>
+
+        <a href="#While_statement" class="nav-link">While statement</a>
+
+        <a href="#References" class="nav-link">References</a>
+      </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--Here comes the page's main content (technical documentation)-->
+      <section class="main-section" id="What_is_JavaScript?">
+        <!--Should have an id that correspond with the text of each header-->
+        <header>What is JavaScript?</header>
+        <article>
+          <p>
+            JavaScript is a scripting or programming language that allows you to implement complex features on web pages
+            — every time a web page does more than just sit there and display static information for you to look at —
+            displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes,
+            etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard
+            web technologies, that includes HTML and CSS.
+          </p>
+          <img
+            src="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript/cake.png"
+            alt=""
+          />
+          <li>
+            HTML is the markup language that we use to structure and give meaning to our web content, for example
+            defining paragraphs, headings, and data tables, or embedding images and videos in the page.
+          </li>
+          <li>
+            CSS is a language of style rules that we use to apply styling to our HTML content, for example setting
+            background colors and fonts, and laying out our content in multiple columns.
+          </li>
+          <li>
+            JavaScript is a scripting language that enables you to create dynamically updating content, control
+            multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what
+            you can achieve with a few lines of JavaScript code.)
+          </li>
+        </article>
+      </section>
+
+      <section class="main-section" id="What_you_should_already_know">
+        <!--Ex. JavaScript and Java should be id="JavaScript_and_Java"-->
+        <!--The .main-section should contain at least 10 p elements total (not each)-->
+        <!--Should contain at least 5 code elements total-->
+        <!--Should contain at leat 5 li items total-->
+        <header>What you should already know</header>
+        <article>
+          <p>This guide assumes you have the following basic background:</p>
+          <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+          <li>
+            Some programming experience. If you are new to programming, try one of the tutorials linked on the main page
+            about JavaScript.
+          </li>
+        </article>
+      </section>
+
+      <section class="main-section" id="What_can_it_really_do?">
+        <header>What can it really do?</header>
+        <article>
+          <p>
+            The core client-side JavaScript language consists of some common programming features that allow you to do
+            things like:
+          </p>
+          <li>Store useful values inside variables.</li>
+          <li>Operations on piece of text (known as "strings" in programming).</li>
+          <li>Running code in response to certain events occurring on a web page.</li>
+          <li>And much more!</li>
+          <p>
+            What is even more exciting however is the functionality built on top of the client-side JavaScript language.
+            So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your
+            JavaScript code.
+          </p>
+          <p>
+            APIs are ready-made sets of code building blocks that allow a developer to implement programs that would
+            otherwise be hard or impossible to implement. They do the same thing for programming that ready-made
+            furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to
+            make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the
+            panels to the right size and shape, find the correct-sized screws, and then put them together to make a
+            bookshelf.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="How_to_start_using_JS?">
+        <header>How to start using JS?</header>
+        <article>
+          <p>
+            You have to ways To get started with writing JavaScript. First, if you want to write your JS code inside
+            your HTML page, you will need to add the <code>&lt; script &gt;</code> element:
+            <!--Esse símbolos representam < e >-->
+          </p>
+          <code> &lt;script&gt; // JavaScript goes here &lt;/script&gt; </code>
+          <p>Now you can add some JavaScript inside your <code>&lt;script&gt;:</code></p>
+
+          <code>
+            document.addEventListener("DOMContentLoaded", function() { function createParagraph() { let para =
+            document.createElement('p'); para.textContent = 'You clicked the button!'; document.body.appendChild(para);
+            } const buttons = document.querySelectorAll('button'); for(let i = 0; i &lt; buttons.length ; i++) {
+            buttons[i].addEventListener('click', createParagraph); } });
+          </code>
+          <p>Now you should see that when you click the button, a new paragraph is generated and placed below.</p>
+          <p>
+            However, if you want to write your JavaScript code in external file, you will nee to create a new file in
+            the same directory as your sample HTML file and call it <code>script.js</code>, then replace your current
+            <code>&lt;script&gt;</code> element with the following:
+          </p>
+          <code>&lt;script src="script.js" defer&gt;&lt;/script&gt; </code>
+          <p>Now you can write your JavaScriptcode within it page.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <article>
+          <p>
+            You use variables as symbolic names for values in your application. The names of variables, called
+            identifiers, conform to certain rules
+          </p>
+          <p>
+            A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters
+            can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through
+            "Z" (uppercase) and the characters "a" through "z" (lowercase).
+          </p>
+          <p>
+            You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode
+            escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and
+            _name.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Declaring_Variables">
+        <header>Declaring Variables</header>
+        <article>
+          <p>You can declare a variable in three ways:</p>
+          <p>With the keyword <code>var</code>, as in:</p>
+          <code> var x = 42 </code>
+          <p>This syntax can be used to declare both local and global variables.</p>
+          <p>By simply assigning it value, as in:</p>
+          <code> x = 42 </code>
+          <p>
+            This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this
+            variant.
+          </p>
+          <p>With the keyword <code>let</code>, as in:</p>
+          <code>let y = 13</code>
+          <p>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="If...else_statement">
+        <header>If...else statement</header>
+        <article>
+          <p>
+            Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to
+            execute a statement if the condition is false. An if statement looks as follows:
+          </p>
+          <code> if (condition) { statement_1; } else { statement_2; } </code>
+          <p>
+            You may also compound the statements using else if to have multiple conditions tested in sequence, as
+            follows:
+          </p>
+          <code>
+            if (condition_1) { statement_1; } else if (condition_2) { statement_2; } else if (condition_n) {
+            statement_n; } else { statement_last; }
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="While_statement">
+        <header>While statement</header>
+        <article>
+          <p>
+            A while statement executes its statements as long as a specified condition evaluates to true. A while
+            statement looks as follows:
+          </p>
+          <code> while (condition) statement </code>
+          <p>Example:</p>
+          <p>The following while loop iterate as lonng as n is less than three:</p>
+          <code> var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; } </code>
+          <p>
+            With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the
+            following values:
+          </p>
+          <li>After the first pass: n = 1 and x = 1</li>
+          <li>After the second pass: n = 2 and x = 3</li>
+          <li>After the third pass: n = 3 and x = 6</li>
+          <p>After completing the third pass, the condition n &lt; 3 is no longer true, so the loop terminates.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="References">
+        <header>References</header>
+        <footer>
+          <p>
+            All the document in this page is taken from
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">MDN Web Docs</a>
+          </p>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
